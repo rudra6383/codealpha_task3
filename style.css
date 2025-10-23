@@ -1,0 +1,29 @@
+/* Dark Cyber style - simple & professional */
+:root{
+  --bg:#07101a; --panel:#0d1620; --muted:#98a6b3; --accent:#19d3d3; --danger:#ff6b6b; --glass: rgba(255,255,255,0.02);
+}
+*{box-sizing:border-box;font-family:Inter,Segoe UI,Roboto,Arial;}
+body{margin:0;background:linear-gradient(180deg,#020617 0%, #07101a 100%);color:#e6f3f6;}
+.app{min-height:100vh;display:flex;flex-direction:column;}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;}
+.logo{font-weight:800;color:var(--accent);font-size:20px;}
+nav{display:flex;gap:8px;align-items:center;}
+.nav-btn{background:var(--glass);border:1px solid rgba(255,255,255,0.03);color:var(--accent);padding:8px 12px;border-radius:8px;cursor:pointer;}
+.nav-btn.secondary{background:transparent;border:1px dashed rgba(255,255,255,0.03);color:var(--muted);}
+.main{flex:1;}
+.page{display:none;padding:28px;}
+.page.active{display:block;}
+.container{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:18px;padding-bottom:24px;}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 8px 30px rgba(0,0,0,0.6);}
+.center{max-width:480px;margin:40px auto;}
+.form{display:flex;flex-direction:column;gap:10px;margin-top:8px;}
+.input, input[type="file"]{padding:10px;border-radius:8px;background:#07151a;border:1px solid rgba(255,255,255,0.03);color:#e6f3f6;}
+.primary{background:linear-gradient(90deg,#13c7c7,#1bbac9);color:#021316;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;}
+.secondary{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);padding:8px 12px;border-radius:8px;cursor:pointer;}
+.muted{color:var(--muted);font-size:13px;}
+.actions{display:flex;gap:8px;}
+.footer{text-align:center;padding:16px;color:var(--muted);font-size:13px;}
+.raw{background:#051018;padding:12px;border-radius:8px;color:#cfeef0;overflow:auto;max-height:360px;}
+.vuln-high{background:linear-gradient(90deg, rgba(255,107,107,0.06), rgba(255,107,107,0.02));padding:8px;border-radius:8px;border-left:4px solid var(--danger);margin-bottom:10px;}
+.vuln-med{background:linear-gradient(90deg, rgba(255,180,64,0.04), rgba(255,180,64,0.02));padding:8px;border-radius:8px;border-left:4px solid #ffb86b;margin-bottom:10px;}
+.vuln-low{background:linear-gradient(90deg, rgba(102,255,153,0.03), rgba(102,255,153,0.01));padding:8px;border-radius:8px;border-left:4px solid #66ff99;margin-bottom:10px;}

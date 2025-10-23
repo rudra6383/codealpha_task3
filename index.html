@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Secure Coding Review</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="logo">SECURE<span>CODE</span></div>
+      <nav>
+        <button id="nav-dashboard" class="nav-btn">Dashboard</button>
+        <button id="nav-upload" class="nav-btn">Upload</button>
+        <button id="nav-reports" class="nav-btn">Reports</button>
+        <button id="nav-admin" class="nav-btn">Admin</button>
+        <button id="logout" class="nav-btn secondary">Logout</button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- LOGIN -->
+      <section id="page-login" class="page active">
+        <div class="card center">
+          <h2>Sign in</h2>
+          <form id="login-form" class="form">
+            <input name="username" placeholder="Username" required/>
+            <input name="password" type="password" placeholder="Password" required/>
+            <button type="submit" class="primary">Sign in</button>
+          </form>
+          <p class="muted">Demo: admin / admin123  | auditor / auditme</p>
+          <p id="login-msg" class="muted"></p>
+        </div>
+      </section>
+
+      <!-- DASHBOARD -->
+      <section id="page-dashboard" class="page">
+        <div class="container">
+          <div class="card">
+            <h3>Welcome</h3>
+            <p class="muted">Quick actions</p>
+            <div class="actions">
+              <button id="goto-upload" class="primary">Upload & Scan</button>
+              <button id="goto-reports" class="secondary">View Reports</button>
+            </div>
+          </div>
+          <div class="card">
+            <h3>System</h3>
+            <p class="muted">API status: <span id="api-status">checking...</span></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- UPLOAD -->
+      <section id="page-upload" class="page">
+        <div class="container">
+          <div class="card">
+            <h3>Upload file for analysis</h3>
+            <form id="upload-form" class="form">
+              <input id="file-input" type="file" accept=".py,.js,.java,.c,.cpp"/>
+              <button type="submit" class="primary">Upload & Scan</button>
+            </form>
+            <p id="upload-msg" class="muted"></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- REPORTS -->
+      <section id="page-reports" class="page">
+        <div class="container">
+          <div class="card">
+            <h3>Reports</h3>
+            <div id="reports-list" class="muted">Loading...</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ADMIN -->
+      <section id="page-admin" class="page">
+        <div class="container">
+          <div class="card">
+            <h3>Admin (demo)</h3>
+            <p class="muted">Delete reports:</p>
+            <div id="admin-list" class="muted">Loading...</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESULT (rendered by separate file view) -->
+      <section id="page-result" class="page">
+        <div class="container">
+          <div class="card">
+            <h3 id="result-title">Report</h3>
+            <div id="vulnerabilities"></div>
+            <hr/>
+            <h4>Raw output</h4>
+            <pre id="raw-output" class="raw"></pre>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">Secure Coding Review • Demo</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
